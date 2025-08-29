@@ -3,24 +3,159 @@
     <head>
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <link rel="stylesheet" href="css/app.css">
+       <link rel="stylesheet" href="style.css">
        <title>Emergency Hotline Bangladesh</title>
    </head>
    <body>
        <header>
            <div class="header-top">
             <div class="brand">
-                <img src="./assets/logo.png" alt="Emergency Hotline Bangladesh">
-           <span>Emergency Service</span>
-
+                <img src="./assets/logo.png" alt="Emergency Hotline Bangladesh" style="height:40px;margin-right:8px;">
+                <span style="color:#065f46;font-weight:700;font-size:1.1em;line-height:1.1;">Emergency<br>Service</span>
             </div>
-            <div class="header-actions">
-                <span class="score"><img src="./assets/heart.png" alt="heart"></span>
-                <span class="score"><img src="./assets/coin.png" alt="coin"></span>
-                <span class="score"><img src="./assets/star.png" alt="star"></span>
+            <div class="header-actions" style="display:flex;align-items:center;gap:1rem;">
+                <span class="score" style="background:#e6fff4;"><span id="heart-count" style="font-weight:600;color:#222;">0</span> <img src="./assets/heart.png" alt="heart" style="height:18px;margin-left:2px;"></span>
+                <span class="score" style="background:#f7f7f7;"><span id="coin-count" style="font-weight:600;color:#222;">100</span> <img src="./assets/coin.png" alt="coin" style="height:18px;margin-left:2px;"></span>
+                <button id="copy-count-btn" style="background:#16a34a;color:#fff;border:none;border-radius:24px;padding:0.3em 1.2em;font-weight:500;font-size:1em;">0 Copy</button>
             </div>
            </div>
-           
+           <div class="header-banner">
+          <h1>Emergency Service Directory</h1>
+            <p>Government Emergency Services at Your Fingertip- A Project by Government of the People's Republic of Bangladesh</p>
+           </div>
        </header>
+       <main class="main-content">
+           <section class="hotline-section">
+            <div class="hotline-grid">
+                <div class="hotline-card">
+                    <div class="card-icon"><img src="./assets/emergency.png" alt="Emergency"></div>
+                    <div class="card-info">
+                        <h3>National Emergency Number</h3>
+                        <span class="card-type">National Emergency</span>
+                        <div class="card-number">999</div>
+                        <div class="card-tags">All</div>
+                    </div>
+                    <div class="card-actions">
+                        <div style="display:flex;gap:0.5rem;">
+                            <button class="copy-btn">Copy</button>
+                            <button class="call-btn">Call</button>
+                        </div>
+                        <div style="margin-top:0.7rem;text-align:left;">
+                            <button class="fav-btn" style="background:#fff;border:none;border-radius:12px;padding:0.4em 0.7em;box-shadow:0 1px 4px rgba(0,0,0,0.07);font-size:1.2em;cursor:pointer;">
+                                <img src='./assets/heart.png' alt='Love' style='height:18px;vertical-align:middle;'>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotline-card">
+                    <div class="card-icon"><img src="./assets/police.png" alt="Emergency"></div>
+                    <div class="card-info">
+                        <h3>Police helpline Number</h3>
+                        <span class="card-type">Police</span>
+                        <div class="card-number">999</div>
+                        <div class="card-tags">Police</div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="copy-btn">Copy</button>
+                        <button class="call-btn">Call</button>
+                        <span class="fav-btn">&#9825;</span>
+                    </div>
+                </div>
+                <div class="hotline-card">
+                    <div class="card-icon"><img src="./assets/fire-service.png" alt="Emergency"></div>
+                    <div class="card-info">
+                        <h3>Fire Service Number</h3>
+                        <span class="card-type">Fire Service</span>
+                        <div class="card-number">999</div>
+                        <div class="card-tags">Fire</div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="copy-btn">Copy</button>
+                        <button class="call-btn">Call</button>
+                        <span class="fav-btn">&#9825;</span>
+                    </div>
+                </div>
+                <div class="hotline-card">
+                    <div class="card-icon"><img src="./assets/heart.png" alt="Emergency"></div>
+                    <div class="card-info">
+                        <h3>Women & Child Helplne</h3>
+                        <span class="card-type">Women & Child Helplne</span>
+                        <div class="card-number">109</div>
+                        <div class="card-tags">help</div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="copy-btn">Copy</button>
+                        <button class="call-btn">Call</button>
+                        <span class="fav-btn">&#9825;</span>
+                    </div>
+                </div>
+                <div class="hotline-card">
+                    <div class="card-icon"><img src="assets/coin.png" alt="Anti-Corruption"></div>
+                    <div class="card-info">
+                        <h3>Anti-Corruption Helpline</h3>
+                        <span class="card-type">Anti-Corruption</span>
+                        <div class="card-number">106</div>
+                        <div class="card-tags">Govt.</div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="copy-btn">Copy</button>
+                        <button class="call-btn">Call</button>
+                        <span class="fav-btn">&#9825;</span>
+                    </div>
+                </div>
+                <div class="hotline-card">
+                    <div class="card-icon"><img src="assets/emergency.png" alt="Electricity"></div>
+                    <div class="card-info">
+                        <h3>Electricity Helpline</h3>
+                        <span class="card-type">Electricity Outage</span>
+                        <div class="card-number">16216</div>
+                        <div class="card-tags">Electricity</div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="copy-btn">Copy</button>
+                        <button class="call-btn">Call</button>
+                        <span class="fav-btn">&#9825;</span>
+                    </div>
+                </div>
+                <div class="hotline-card">
+                    <div class="card-icon"><img src="assets/brac.png" alt="Brac"></div>
+                    <div class="card-info">
+                        <h3>Brac Helpline</h3>
+                        <span class="card-type">Brac</span>
+                        <div class="card-number">16445</div>
+                        <div class="card-tags">NGO</div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="copy-btn">Copy</button>
+                        <button class="call-btn">Call</button>
+                        <span class="fav-btn">&#9825;</span>
+                    </div>
+                </div>
+                <div class="hotline-card">
+                    <div class="card-icon"><img src="assets/Bangladesh-Railway.png" alt="Bangladesh Railway"></div>
+                    <div class="card-info">
+                        <h3>Bangladesh Railway Helpline</h3>
+                        <span class="card-type">Bangladesh Railway</span>
+                        <div class="card-number">163</div>
+                        <div class="card-tags">Travel</div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="copy-btn">Copy</button>
+                        <button class="call-btn">Call</button>
+                        <span class="fav-btn">&#9825;</span>
+                    </div>
+                </div>
+           </section>
+            <aside class="call-history">
+            <div class="call-history-header">
+                <h3>Call History</h3>
+                <button class="clear-history-btn">Clear</button>
+            </div>
+            <ul class="call-history-list">
+                <!-- Call history items will be added by JS -->
+            </ul>
+        </aside>
+       </main>
+    <script src="script.js"></script>
    </body>
 </html>
